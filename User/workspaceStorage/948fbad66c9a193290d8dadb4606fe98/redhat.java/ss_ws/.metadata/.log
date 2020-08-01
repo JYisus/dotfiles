@@ -1,0 +1,81 @@
+!SESSION 2020-04-07 14:51:58.636 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=9.0.4
+java.vendor=Oracle Corporation
+BootLoader constants: OS=macosx, ARCH=x86_64, WS=cocoa, NL=es_ES
+Command-line arguments:  -data /Users/yisus/Library/Application Support/Code/User/workspaceStorage/948fbad66c9a193290d8dadb4606fe98/redhat.java/ss_ws
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2020-04-07 14:52:03.288
+!MESSAGE class org.eclipse.jdt.ls.core.internal.JavaLanguageServerPlugin is started
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2020-04-07 14:52:03.417
+!MESSAGE Main thread is waiting
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2020-04-07 14:52:03.451
+!MESSAGE >> initialize
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2020-04-07 14:52:03.453
+!MESSAGE Initializing Java Language Server 0.54.0.202004031121
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2020-04-07 14:52:03.466
+!MESSAGE Creating the Java project jdt.ls-java-project
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2020-04-07 14:52:03.478
+!MESSAGE >> initialized
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2020-04-07 14:52:03.712
+!MESSAGE Finished creating the Java project jdt.ls-java-project
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2020-04-07 14:52:04.903
+!MESSAGE Workspace initialized in 1437ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2020-04-07 14:52:05.006
+!MESSAGE >> initialization job finished
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2020-04-07 14:52:05.009
+!MESSAGE >> registerFeature 'workspace/didChangeWatchedFiles'
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2020-04-07 14:52:05.011
+!MESSAGE >> registerFeature 'workspace/didChangeWatchedFiles'
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2020-04-07 14:52:05.013
+!MESSAGE >> workspace/didChangeConfiguration
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2020-04-07 14:52:05.016
+!MESSAGE >> document/didOpen
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2020-04-07 14:52:05.023
+!MESSAGE Creating the Java project JAAS_17ce556a
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2020-04-07 14:52:05.038
+!MESSAGE Finished creating the Java project JAAS_17ce556a
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2020-04-07 14:52:05.464
+!MESSAGE >> registerFeature 'workspace/didChangeWatchedFiles'
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2020-04-07 14:52:05.465
+!MESSAGE >> registerFeature 'workspace/didChangeWatchedFiles'
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2020-04-07 14:52:06.673
+!MESSAGE Reconciled 0. Took 717 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2020-04-07 14:52:07.164
+!MESSAGE begin problem for /App.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2020-04-07 14:52:07.164
+!MESSAGE 0 problems reported for /App.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2020-04-07 14:52:07.170
+!MESSAGE Validated 1. Took 94 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2020-04-07 14:52:07.824
+!MESSAGE >> shutdown
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2020-04-07 14:52:07.853
+!MESSAGE >> exit
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2020-04-07 14:52:07.854
+!MESSAGE Shutdown received... waking up main thread
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2020-04-07 14:52:07.858
+!MESSAGE class org.eclipse.jdt.ls.core.internal.JavaLanguageServerPlugin is stopping:

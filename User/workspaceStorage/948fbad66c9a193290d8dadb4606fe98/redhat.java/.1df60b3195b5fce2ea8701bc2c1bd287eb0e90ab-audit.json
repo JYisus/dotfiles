@@ -1,0 +1,19 @@
+{
+    "keep": {
+        "days": true,
+        "amount": 2
+    },
+    "auditLog": "/Users/yisus/Library/Application Support/Code/User/workspaceStorage/948fbad66c9a193290d8dadb4606fe98/redhat.java/.1df60b3195b5fce2ea8701bc2c1bd287eb0e90ab-audit.json",
+    "files": [
+        {
+            "date": 1586202700085,
+            "name": "/Users/yisus/Library/Application Support/Code/User/workspaceStorage/948fbad66c9a193290d8dadb4606fe98/redhat.java/client.log.2020-04-06",
+            "hash": "bac5ed51933f6c117479d94ffeca7a3e"
+        },
+        {
+            "date": 1586267517225,
+            "name": "/Users/yisus/Library/Application Support/Code/User/workspaceStorage/948fbad66c9a193290d8dadb4606fe98/redhat.java/client.log.2020-04-07",
+            "hash": "7261c35228e825116b4036faaa82c9d1"
+        }
+    ]
+}
