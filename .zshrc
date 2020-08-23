@@ -11,13 +11,13 @@ fi
 # Path to your oh-my-zsh installation.
 export ZSH="/Users/yisus/.oh-my-zsh"
 
-export BASH=$BASH:/Users/yisus/Library/Python/3.7/bin
+export PATH=$PATH:/Users/yisus/Library/Python/3.7/bin
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
-# ZSH_THEME="af-magic" #"robbyrussell"
+#ZSH_THEME="af-magic" #"robbyrussell"
 ZSH_THEME="powerlevel10k/powerlevel10k"
 
 # Set list of themes to pick from when loading at random
@@ -116,3 +116,9 @@ if [ -f '/Users/yisus/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/yis
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+if command -v pyenv 1>/dev/null 2>&1; then
+  eval "$(pyenv init -)"
+fi
+
+
+export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"

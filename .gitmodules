@@ -1,0 +1,39 @@
+[submodule "editors/vim/pack/juan/start/ale"]
+	path = editors/vim/pack/juan/start/ale
+	url = https://github.com/dense-analysis/ale
+[submodule "editors/vim/pack/juan/start/--force"]
+	path = editors/vim/pack/juan/start/--force
+	url = https://github.com/dense-analysis/ale
+[submodule "editors/vim/pack/juan/start/editorconfig-vim"]
+	path = editors/vim/pack/juan/start/editorconfig-vim
+	url = https://github.com/editorconfig/editorconfig-vim
+[submodule "editors/vim/pack/juan/start/nerdtree"]
+	path = editors/vim/pack/juan/start/nerdtree
+	url = https://github.com/preservim/nerdtree
+[submodule "editors/vim/pack/juan/start/nerdtree-git-plugin"]
+	path = editors/vim/pack/juan/start/nerdtree-git-plugin
+	url = https://github.com/Xuyuanp/nerdtree-git-plugin
+[submodule "editors/vim/pack/juan/start/coc.nvim"]
+	path = editors/vim/pack/juan/start/coc.nvim
+	url = https://github.com/neoclide/coc.nvim
+[submodule "editors/vim/pack/juan/start/emmet-vim"]
+	path = editors/vim/pack/juan/start/emmet-vim
+	url = https://github.com/mattn/emmet-vim
+[submodule "editors/vim/pack/nvim/start/nvim-yarp"]
+	path = editors/vim/pack/nvim/start/nvim-yarp
+	url = https://github.com/roxma/nvim-yarp
+[submodule "editors/vim/pack/nvim/start/vim-hug-neovim-rpc"]
+	path = editors/vim/pack/nvim/start/vim-hug-neovim-rpc
+	url = https://github.com/roxma/vim-hug-neovim-rpc
+[submodule "editors/vim/pack/themes/start/vim-airline"]
+	path = editors/vim/pack/themes/start/vim-airline
+	url = https://github.com/vim-airline/vim-airline
+[submodule "editors/vim/pack/themes/start/vim-airline-themes"]
+	path = editors/vim/pack/themes/start/vim-airline-themes
+	url = https://github.com/vim-airline/vim-airline-themes
+[submodule "editors/vim/pack/themes/start/gruvbox"]
+	path = editors/vim/pack/themes/start/gruvbox
+	url = https://github.com/morhetz/gruvbox
+[submodule "editors/vim/pack/juan/start/coc"]
+	path = editors/vim/pack/juan/start/coc
+	url = https://github.com/neoclide/coc.nvim
