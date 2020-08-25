@@ -34,6 +34,3 @@
 [submodule "editors/vim/pack/themes/start/gruvbox"]
 	path = editors/vim/pack/themes/start/gruvbox
 	url = https://github.com/morhetz/gruvbox
-[submodule "editors/vim/pack/juan/start/coc"]
-	path = editors/vim/pack/juan/start/coc
-	url = https://github.com/neoclide/coc.nvim
