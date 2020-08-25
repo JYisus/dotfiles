@@ -12,6 +12,12 @@ fi
 #ZSH_THEME="af-magic" #"robbyrussell"
 ZSH_THEME="powerlevel10k/powerlevel10k"
 
+alias sudo="sudo "
+alias cdc="cd $HOME/Code"
+alias cdw="cdc; cd Work"
+alias cdu="cdc; cd UOC"
+alias cdp="cdc; cd Personal"
+
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
 # a theme from this variable instead of looking in ~/.oh-my-zsh/themes/
