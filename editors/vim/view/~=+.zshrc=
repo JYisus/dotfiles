@@ -1,7 +1,10 @@
 let s:so_save = &so | let s:siso_save = &siso | set so=0 siso=0
 argglobal
+setlocal keymap=
+setlocal noarabic
 setlocal noautoindent
 setlocal backupcopy=
+setlocal balloonexpr=
 setlocal nobinary
 setlocal nobreakindent
 setlocal breakindentopt=
@@ -16,6 +19,8 @@ setlocal colorcolumn=
 setlocal comments=:#
 setlocal commentstring=#\ %s
 setlocal complete=.,w,b,u,t,i
+setlocal concealcursor=
+setlocal conceallevel=0
 setlocal completefunc=
 setlocal nocopyindent
 setlocal cryptmethod=
@@ -76,11 +81,12 @@ setlocal nopreviewwindow
 setlocal quoteescape=\\
 setlocal noreadonly
 setlocal relativenumber
+setlocal norightleft
+setlocal rightleftcmd=search
 setlocal noscrollbind
 setlocal scrolloff=-1
 setlocal shiftwidth=2
 setlocal noshortname
-setlocal showbreak=
 setlocal sidescrolloff=-1
 setlocal signcolumn=auto
 setlocal nosmartindent
@@ -89,7 +95,7 @@ setlocal nospell
 setlocal spellcapcheck=[.?!]\\_[\\])'\"\	\ ]\\+
 setlocal spellfile=
 setlocal spelllang=en
-setlocal statusline=
+setlocal statusline=%!airline#statusline(1)
 setlocal suffixesadd=
 setlocal swapfile
 setlocal synmaxcol=3000
@@ -107,18 +113,20 @@ setlocal textwidth=79
 setlocal thesaurus=
 setlocal noundofile
 setlocal undolevels=-123456
+setlocal varsofttabstop=
+setlocal vartabstop=
 setlocal wincolor=
 setlocal nowinfixheight
 setlocal nowinfixwidth
 setlocal wrap
 setlocal wrapmargin=0
 silent! normal! zE
-let s:l = 22 - ((11 * winheight(0) + 38) / 77)
+let s:l = 14 - ((13 * winheight(0) + 35) / 71)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
-22
-normal! 023|
+14
+normal! 043|
 let &so = s:so_save | let &siso = s:siso_save
 doautoall SessionLoadPost
 " vim: set ft=vim :
