@@ -17,7 +17,25 @@ alias cdc="cd $HOME/Code"
 alias cdw="cdc; cd Work"
 alias cdu="cdc; cd UOC"
 alias cdp="cdc; cd Personal"
+alias gps="git push"
+alias gb="git branch"
 
+function docker_list {
+  containers=$(docker ps | awk '{if (NR!=1) print $1 ": " $(NF)}')
+
+  echo "Contaniners"
+  echo $containers
+}
+
+function gc {
+  git add -A
+
+  if [ -z "$1" ]; then
+    git commit -S
+  else
+    git commit -S -m"$1"
+  fi
+}
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
 # a theme from this variable instead of looking in ~/.oh-my-zsh/themes/
@@ -115,4 +133,7 @@ if command -v pyenv 1>/dev/null 2>&1; then
   eval "$(pyenv init -)"
 fi
 
-
+export GOPATH=$HOME/go
+export GO111MODULES=on
+export PATH=$PATH:$GOPATH/bin
+export PATH=$PATH:/Users/yisus/fabric-samples/bin
