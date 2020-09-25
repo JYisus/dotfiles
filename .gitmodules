@@ -34,3 +34,9 @@
 [submodule "editors/vim/pack/themes/start/gruvbox"]
 	path = editors/vim/pack/themes/start/gruvbox
 	url = https://github.com/morhetz/gruvbox
+[submodule "editors/vim/pack/juan/start/editors/vim/pack/juan/start/vim-go"]
+	path = editors/vim/pack/juan/start/editors/vim/pack/juan/start/vim-go
+	url = https://github.com/fatih/vim-go.git
+[submodule "editors/vim/editors/vim/plugged/fzf.vim"]
+	path = editors/vim/editors/vim/plugged/fzf.vim
+	url = https://github.com/junegunn/fzf.vim
