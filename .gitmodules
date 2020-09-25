@@ -40,3 +40,9 @@
 [submodule "editors/vim/editors/vim/plugged/fzf.vim"]
 	path = editors/vim/editors/vim/plugged/fzf.vim
 	url = https://github.com/junegunn/fzf.vim
+[submodule "editors/vim/editors/vim/pack/juan/start/auto-pairs"]
+	path = editors/vim/editors/vim/pack/juan/start/auto-pairs
+	url = https://github.com/jiangmiao/auto-pairs
+[submodule "editors/vim/pack/juan/start/auto-pairs"]
+	path = editors/vim/pack/juan/start/auto-pairs
+	url = https://github.com/jiangmiao/auto-pairs
