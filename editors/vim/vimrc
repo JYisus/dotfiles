@@ -145,5 +145,5 @@ noremap <leader>fs :Files<cr>
 noremap <leader><cr> <cr><c-w>h:q<cr>
 
 map <C-p> :NERDTreeToggle<CR>
-:imap ii <Esc>
+:imap jj <Esc>
 
