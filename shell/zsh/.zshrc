@@ -10,7 +10,7 @@ fi
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
 #ZSH_THEME="af-magic" #"robbyrussell"
-ZSH_THEME="powerlevel10k/powerlevel10k"
+ZSH_THEME="powerlevel10k/powerlevel10"
 
 alias sudo="sudo "
 alias cdc="cd $HOME/Code"
@@ -36,6 +36,16 @@ function gc {
     git commit -S -m"$1"
   fi
 }
+
+function _reverse_search {
+  selected_command=$(fc -rl 1 | awk '{$1="";print substr($0,2)}' | fzf)
+  echo -n $selected_command
+}
+
+zle 	-N 	_reverse_search
+bindkey '^h' _reverse_search
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
 # a theme from this variable instead of looking in ~/.oh-my-zsh/themes/
@@ -91,7 +101,7 @@ function gc {
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git)
+plugins=(git docker docker-compose zsh-syntax-highlighting zsh-autosuggestions)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -137,3 +147,4 @@ export GOPATH=$HOME/go
 export GO111MODULES=on
 export PATH=$PATH:$GOPATH/bin
 export PATH=$PATH:/Users/yisus/fabric-samples/bin
+export PATH=$PATH:$HOME/.local/bin
