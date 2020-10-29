@@ -101,7 +101,7 @@ bindkey '^h' _reverse_search
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git docker docker-compose zsh-syntax-highlighting zsh-autosuggestions)
+plugins=(git docker docker-compose)
 
 source $ZSH/oh-my-zsh.sh
 
