@@ -10,7 +10,7 @@ fi
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
 #ZSH_THEME="af-magic" #"robbyrussell"
-ZSH_THEME="powerlevel10k/powerlevel10"
+ZSH_THEME="powerlevel10k/powerlevel10k"
 
 alias sudo="sudo "
 alias cdc="cd $HOME/Code"
@@ -43,7 +43,7 @@ function _reverse_search {
 }
 
 zle 	-N 	_reverse_search
-bindkey '^h' _reverse_search
+bindkey '^r' _reverse_search
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 # Set list of themes to pick from when loading at random
