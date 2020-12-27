@@ -133,6 +133,17 @@ endif
 call plug#begin('~/.vim/plugged')
   Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
   Plug 'junegunn/fzf.vim'
+  Plug 'vim-airline/vim-airline'
+  Plug 'vim-airline/vim-airline-themes'
+  Plug 'dense-analysis/ale'
+  Plug 'jiangmiao/auto-pairs'
+  Plug 'tpope/vim-commentary'
+  Plug 'neoclide/coc.nvim', {'branch': 'release'}
+  Plug 'mattn/emmet-vim'
+  Plug 'preservim/nerdtree'
+  Plug 'editorconfig/editorconfig-vim'
+  Plug 'Xuyuanp/nerdtree-git-plugin'
+  Plug 'vim-scripts/c.vim'
 call plug#end()
 
 
