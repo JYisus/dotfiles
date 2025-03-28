@@ -1,0 +1,12 @@
+#!/usr/bin/env bash
+
+mkdir /tmp/dev-env
+cd /tmp/dev-env
+
+curl -LO https://get.helm.sh/helm-v3.17.1-linux-amd64.tar.gz
+tar -xzf helm-v3.17.1-linux-amd64.tar.gz 
+sudo cp linux-amd64/helm $HOME/.local/bin
+
+curl -LO https://github.com/helmfile/helmfile/releases/download/v0.171.0/helmfile_0.171.0_linux_amd64.tar.gz
+tar -xzf helmfile_0.171.0_linux_amd64.tar.gz
+sudo mv helmfile $HOME/.local/bin

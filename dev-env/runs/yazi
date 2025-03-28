@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+
+sudo apt install ffmpeg poppler-utils jq ripgrep imagemagick 7zip fd-find
+
+# Install zoxide
+curl -sSfL https://raw.githubusercontent.com/ajeetdsouza/zoxide/main/install.sh | sh
+
+cargo install --locked yazi-fm yazi-cli

@@ -1,0 +1,16 @@
+[window]
+
+opacity = 0.5
+padding.x = 0
+padding.y = 0
+
+decorations = "Full"
+decorations_theme_variant = "Dark" # "Dark"
+
+[font]
+
+normal.family = "Fira Code"
+bold.family = "Fira Code"
+italic.family = "Fira Code"
+bold_italic.family = "Fira Code"
+

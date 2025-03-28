@@ -1,0 +1,12 @@
+#!/usr/bin/env bash
+
+mkdir /tmp/dev-env
+cd /tmp/dev-env
+
+curl -LO "https://dl.k8s.io/release/$(curl -L -s https://dl.k8s.io/release/stable.txt)/bin/linux/amd64/kubectl"
+sudo chmod +x kubectl
+sudo mv kuebctl $HOME/.local/bin
+
+curl -LO https://github.com/derailed/k9s/releases/download/v0.40.5/k9s_linux_amd64.deb
+sudo dpkg -i k9s_linux_amd64.deb
+
