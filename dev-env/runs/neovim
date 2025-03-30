@@ -1,7 +1,27 @@
 #!/usr/bin/env bash
 
+mkdir /tmp/dev-env
+cd /tmp/dev-env 
+
 curl -LO https://github.com/neovim/neovim/releases/latest/download/nvim-linux-x86_64.tar.gz
 sudo rm -rf /opt/nvim
 sudo tar -C /opt -xzf nvim-linux-x86_64.tar.gz
 sudo mv /opt/nvim-linux-x86_64 /opt/nvim
 rm nvim-linux-x86_64.tar.gz
+
+cd /tmp/dev-env
+
+curl -L -R -O https://www.lua.org/ftp/lua-5.4.7.tar.gz
+tar zxf lua-5.4.7.tar.gz
+cd lua-5.4.7
+sudo make all install
+
+cd /tmp/dev-env
+
+wget https://luarocks.org/releases/luarocks-3.11.1.tar.gz
+tar zxpf luarocks-3.11.1.tar.gz
+cd luarocks-3.11.1
+./configure && make && sudo make install
+sudo luarocks install luasocket
+
+rm -rf /tmp/dev-env
