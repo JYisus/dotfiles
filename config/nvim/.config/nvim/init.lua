@@ -1,8 +1,8 @@
-require("theprimeagen")
+require("config")
 
 -- map leader to spacebar
-vim.g.mapleader = " "
-vim.g.maplocalleader = " "
+-- vim.g.mapleader = " "
+-- vim.g.maplocalleader = " "
 -- <leader>pv to show directory tree
 vim.keymap.set("n", "<leader>pv", vim.cmd.Ex)
 -- hide search highlight
