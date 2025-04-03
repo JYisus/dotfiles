@@ -32,7 +32,7 @@ return {
 			lspconfig.gopls.setup{
 				settings = {
 					gopls = {
-						buildFlags = {"-tags=unit,ingtegration,tools"},
+						buildFlags = {"-tags=unit,integration,tools"},
 						completeUnimported=true,
 					}
 				}
