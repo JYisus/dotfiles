@@ -11,8 +11,10 @@
 
 set $mod Mod4
 
+
 exec_always killall polybar
 exec_always --no-startup-id ~/.config/polybar/execute_polybar.sh
+
 
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
@@ -196,8 +198,6 @@ bindsym Ctrl+$mod+p exec --no-startup-id maim --select | xclip -selection clipbo
 bindsym Ctrl+$mod+s exec --no-startup-id maim --window $(xdotool getactivewindow) | xclip -selection clipboard -t image/png
 bindsym Ctrl+$mod+o exec --no-startup-id maim $HOME/Imágenes/$(date +%F-%H%M%S).png --select 
 
-# exec_always "setxkbmap -layout us,es -option 'grp:ctrl_alt_toggle'"
-
 bindsym XF86MonBrightnessUp exec --no-startup-id brightnessctl set +10%
 bindsym XF86MonBrightnessDown exec --no-startup-id brightnessctl set 10%-
 
@@ -207,3 +207,10 @@ default_floating_border none
 
 # Hides vertical and horizontal borders when there's only one window.
 hide_edge_borders both
+
+# exec_always --no-startup-id "xrandr --output eDP-1 --left-of HDMI-1-0"
+# exec_always --no-startup-id "xrandr --output DP-2-8 --right-of HDMI-1-0"
+# exec_always --no-startup-id "xrandr --output eDP-1 --scale 0.5x0.5"
+exec_always --no-startup-id "~/fix_screen"
+# exec "setxkbmap -option 'grp:win_space_toggle'"
+exec_always --no-startup-id "sleep 5; setxkbmap -layout us,es"

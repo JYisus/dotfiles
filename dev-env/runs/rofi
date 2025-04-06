@@ -1,24 +1,24 @@
 #!/usr/bin/env bash
 
-# sudo apt install libpango1.0-dev libcairo2-dev libglib2.0-dev libgdk-pixbuf2.0-dev libstartup-notification0-dev libxkbcommon-dev libxcb1-dev libxcb-util0-dev libxcb-imdkit-dev
-#
-# sudo apt install gcc make autoconf automake pkg-config flex bison check libglib2.0-dev
-# sudo apt install -y libxcb-xkb-dev libxkbcommon-x11-dev libxcb-ewmh-dev libxcb-icccm4-dev libxcb-cursor-dev libxcb-randr0-dev libxcb-xinerama0-dev
-#
-#
-# mkdir /tmp/dev-env
-# curl -L -o /tmp/dev-env/rofi.tar.gz https://github.com/davatorium/rofi/releases/download/1.7.8/rofi-1.7.8.tar.gz
-# tar -xzf /tmp/dev-env/rofi.tar.gz -C /tmp/dev-env
-#
-# mkdir /tmp/dev-env/rofi-1.7.8/build
-#
-# cd /tmp/dev-env/rofi-1.7.8/build
-#
-# ../configure
-#
-# make
-#
-# sudo make install
+sudo apt install libpango1.0-dev libcairo2-dev libglib2.0-dev libgdk-pixbuf2.0-dev libstartup-notification0-dev libxkbcommon-dev libxcb1-dev libxcb-util0-dev libxcb-imdkit-dev
+
+sudo apt install gcc make autoconf automake pkg-config flex bison check libglib2.0-dev
+sudo apt install -y libxcb-xkb-dev libxkbcommon-x11-dev libxcb-ewmh-dev libxcb-icccm4-dev libxcb-cursor-dev libxcb-randr0-dev libxcb-xinerama0-dev
+
+
+mkdir /tmp/dev-env
+curl -L -o /tmp/dev-env/rofi.tar.gz https://github.com/davatorium/rofi/releases/download/1.7.8/rofi-1.7.8.tar.gz
+tar -xzf /tmp/dev-env/rofi.tar.gz -C /tmp/dev-env
+
+mkdir /tmp/dev-env/rofi-1.7.8/build
+
+cd /tmp/dev-env/rofi-1.7.8/build
+
+../configure
+
+make
+
+sudo make install
 
 cd /tmp/dev-env
 
