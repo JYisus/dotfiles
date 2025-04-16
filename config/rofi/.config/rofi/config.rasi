@@ -1,4 +1,5 @@
 configuration{
+		combi-modes: ["window", "drun", "run"];
     modi: "run,window,combi";
     icon-theme: "Oranchelo";
     show-icons: true;
@@ -9,6 +10,7 @@ configuration{
     hide-scrollbar: true;
     display-combi: " 🖥️  All ";
     display-run: " 🏃  Run ";
+    display-drun: " 🏃  Run ";
     display-window: " 🪟  Window";
     sidebar-mode: true;
 }
