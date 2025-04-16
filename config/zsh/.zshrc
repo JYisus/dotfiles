@@ -75,7 +75,7 @@ zstyle ':zim:input' double-dot-expand no
 # zstyle ':completion:*:*:kill:*:processes' list-colors '=(#b) #([0-9]#)*=0=01;31'
 # zstyle ':completion:*:kill:*' command 'ps -u $USER -o pid,%cpu,tty,cputime,cmd'
 
-export PATH="$PATH:/home/jpadron/go/bin:/opt/nvim/bin:~/.cargo/bin/alacritty:/home/jpadron/.local/kitty.app/bin:$HOME/.local/bin:/usr/local/go/bin"
+export PATH="$PATH:$HOME/go/bin:/opt/nvim/bin:~/.cargo/bin/alacritty:$HOME/.local/kitty.app/bin:$HOME/.local/bin:/usr/local/go/bin"
 
 export EDITOR="nvim"
 
@@ -99,22 +99,22 @@ export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || pr
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
-export PATH="/home/jpadron/miniconda3/bin:$PATH"
+export PATH="$HOME/miniconda3/bin:$PATH"
 zsh-defer load_conda
 
-zsh-defer . "/home/jpadron/.deno/env"
+zsh-defer . "$HOME/.deno/env"
 
 function load_conda() {
 	# !! Contents within this block are managed by 'conda init' !!
 	# >>> conda initialize >>>
-	__conda_setup="$('/home/jpadron/miniconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
+	__conda_setup="$('$HOME/miniconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
 	if [ $? -eq 0 ]; then
 			eval "$__conda_setup"
 	else
-			if [ -f "/home/jpadron/miniconda3/etc/profile.d/conda.sh" ]; then
-					. "/home/jpadron/miniconda3/etc/profile.d/conda.sh"
+			if [ -f "$HOME/miniconda3/etc/profile.d/conda.sh" ]; then
+					. "$HOME/miniconda3/etc/profile.d/conda.sh"
 			else
-					export path="/home/jpadron/miniconda3/bin:$path"
+					export path="$HOME/miniconda3/bin:$path"
 			fi
 	fi
 	unset __conda_setup
