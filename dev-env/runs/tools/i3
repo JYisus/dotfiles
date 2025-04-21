@@ -21,4 +21,6 @@ sudo ninja install
 
 cd $dir
 
+sudo apt install polybar
+
 rm -rf /tmp/dev-env
