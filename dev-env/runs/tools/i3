@@ -13,6 +13,7 @@ sudo apt install libxcb1-dev libxcb-keysyms1-dev libpango1.0-dev \
                  libxcb-shape0-dev pkg-config meson
 
 curl -LO https://i3wm.org/downloads/i3-4.24.tar.xz
+tar -xzf i3-4.24.tar.xz
 cd i3-4.24
 mkdir build && cd build
 meson ..
