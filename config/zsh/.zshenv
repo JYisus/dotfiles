@@ -8,7 +8,9 @@ path=(
 	/home/jpadron/.local/kitty.app/bin
 	$HOME/.local/bin
 	/usr/local/go/bin
-	/test
+	/home/juan/.deno/bin
 )
+
+export EDITOR=$(which nvim)
 
 . "$HOME/.cargo/env"
