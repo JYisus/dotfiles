@@ -25,4 +25,4 @@ vim.opt.colorcolumn = "80"
 
 vim.opt.shiftwidth = 2
 
-vim.opt.conceallevel = 1
+-- vim.opt.conceallevel = 1
