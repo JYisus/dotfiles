@@ -27,18 +27,18 @@ ZSH_HIGHLIGHT_MAXLENGTH=300
 
 
 # Use modern completion system
-# autoload -Uz compinit
-# compinit
 #
 
 ZINIT_HOME="${XDG_DATA_HOME:-${HOME}/.local/share}/zinit/zinit.git"
 [ ! -d $ZINIT_HOME ] && mkdir -p "$(dirname $ZINIT_HOME)"
 [ ! -d $ZINIT_HOME/.git ] && git clone https://github.com/zdharma-continuum/zinit.git "$ZINIT_HOME"
 source "${ZINIT_HOME}/zinit.zsh"
-
+#
+# autoload -Uz compinit
+# compinit
 # zinit ice atinit'zmodload zsh/zprof'
-
-autoload -U compinit && compinit
+#
+# autoload -U compinit && compinit
 zinit light romkatv/zsh-defer
 # https://github.com/zimfw/environment
 zinit light zimfw/environment
@@ -47,11 +47,12 @@ zinit light zimfw/input
 zinit light zsh-users/zsh-syntax-highlighting
 zinit light zsh-users/zsh-completions
 zinit light zsh-users/zsh-autosuggestions
-zinit light Aloxaf/fzf-tab
-
+zsh-defer zinit light Aloxaf/fzf-tab
+#
+zsh-defer autoload -U compinit && compinit -d ~/.zsh/cache/zcompdump
 zinit snippet OMZP::git
 zsh-defer zinit snippet OMZP::nvm
-
+#
 zstyle 'omz:plugins:nvm' lazy yes
 zstyle ':completion:*:default' list-colors ${(s.:.)LS_COLORS}
 zstyle ':completion:*' matcher-list '' 'm:{a-z}={A-Z}' 'm:{a-zA-Z}={A-Za-z}' 'r:|[._-]=* r:|=* l:|=*'
@@ -77,8 +78,6 @@ zstyle ':zim:input' double-dot-expand no
 
 export PATH="$PATH:$HOME/go/bin:/opt/nvim/bin:~/.cargo/bin/alacritty:$HOME/.local/kitty.app/bin:$HOME/.local/bin:/usr/local/go/bin"
 
-export EDITOR="nvim"
-
 export GOPRIVATE="gitlab.intelygenz.com"
 
 alias ls='ls --color'
@@ -95,9 +94,9 @@ alias cdp="cd $CODE_PATH/personal"
 eval "$(starship init zsh)"
 eval "$(zoxide init --cmd cd zsh)"
 
-export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+# export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
+# [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
+# [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
 export PATH="$HOME/miniconda3/bin:$PATH"
 zsh-defer load_conda
@@ -124,5 +123,22 @@ function load_conda() {
 function git_last_commit() {
 	git log | awk '{print $2}' | head -1 | xclip -sel clip
 }
+
+function new_migration() {
+	file_name="$(date -u +%Y-%m-%dT%H%M%SZ)_$1.sql"
+	touch $file_name
+	chmod 775 $file_name
+}
+
+# function dockertest() {
+# 	echo ""
+# # 	package=$(go list ./... | fzf)
+# # 	inotifywait --monitor --event modify --recursive ~/code/work/newflex/go-backend/${package#"newflex/"} 
+# # 	# |
+# # 	# 	while read path action file; do
+# # 	# 		echo "change detected $path $action $file"
+# # 	# 		# docker-compose -p newflex -f docker-compose.yml -f docker-compose.dev.yml exec go-backend gotestsum --format dots-v2 -- -race -v $package
+# # 	# 	done
+# }
 
 # zprof

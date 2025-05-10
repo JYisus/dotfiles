@@ -58,6 +58,8 @@ bindsym $mod+Shift+q kill
 # start dmenu (a program launcher)
 # bindsym $mod+d exec dmenu_run
 bindsym $mod+d exec --no-startup-id rofi -show combi 
+bindsym $mod+Shift+b exec --no-startup-id rofi-bluetooth
+# bindsym $mod+Shift+b exec --no-startup-id ~/code/tools/rofi-bluetooth/rofi-bluetooth
 # -run-command "i3-msg exec '{cmd}'" -show-i/cons
 # bindsym $mod+d exec --no-startup-id ~/.config/rofi/launchers/type-2/launcher.sh -run-command "i3-msg exec '{cmd}'"
 # There also is the (new) i3-dmenu-desktop which only displays applications
@@ -79,10 +81,11 @@ bindsym $mod+Up focus up
 bindsym $mod+Right focus right
 
 # move focused window
-bindsym $mod+Shift+j move left
-bindsym $mod+Shift+k move down
-bindsym $mod+Shift+l move up
-bindsym $mod+Shift+ntilde move right
+bindsym $mod+Shift+h move left
+bindsym $mod+Shift+j move down
+bindsym $mod+Shift+k move up
+bindsym $mod+Shift+l move right
+# bindsym $mod+Shift+ntilde move right
 
 # alternatively, you can use the cursor keys:
 bindsym $mod+Shift+Left move left
@@ -91,7 +94,7 @@ bindsym $mod+Shift+Up move up
 bindsym $mod+Shift+Right move right
 
 # split in horizontal orientation
-bindsym $mod+Shifat+h split h
+# bindsym $mod+Shift+h split h
 
 # split in vertical orientation
 bindsym $mod+v split v
