@@ -25,4 +25,5 @@ vim.opt.colorcolumn = "80"
 
 vim.opt.shiftwidth = 2
 
+vim.opt.ignorecase = true
 -- vim.opt.conceallevel = 1
