@@ -25,6 +25,7 @@ bindkey '^n' history-search-forward
 ZSH_AUTOSUGGEST_USE_ASYNC=true
 ZSH_HIGHLIGHT_MAXLENGTH=300
 
+# source $HOME/.secrets
 
 # Use modern completion system
 #
@@ -88,6 +89,8 @@ CODE_PATH="$HOME/code"
 alias cdc="cd $CODE_PATH"
 alias cdw="cd $CODE_PATH/work"
 alias cdp="cd $CODE_PATH/personal"
+alias cdt="cd $CODE_PATH/tools"
+alias vim="nvim"
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 

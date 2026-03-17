@@ -24,7 +24,16 @@ return {
 				notification = {
 					-- wo = { wrap = true } -- Wrap notifications
 				}
-			}
+			},
+			indent =  {
+				only_scope = true,
+				animate = {
+					enabled = false,
+				},
+				scope = {
+					only_current = true,
+				},
+			},
 		},
 		keys = {
 			-- Top Pickers & Explorer
@@ -99,6 +108,41 @@ return {
 			{ "<c-_>",      function() Snacks.terminal() end, desc = "which_key_ignore" },
 			{ "]]",         function() Snacks.words.jump(vim.v.count1) end, desc = "Next Reference", mode = { "n", "t" } },
 			{ "[[",         function() Snacks.words.jump(-vim.v.count1) end, desc = "Prev Reference", mode = { "n", "t" } },
+			-- scope
+			textobject = {
+      ii = {
+        min_size = 2, -- minimum size of the scope
+        edge = false, -- inner scope
+        cursor = false,
+        treesitter = { blocks = { enabled = false } },
+        desc = "inner scope",
+      },
+      ai = {
+        cursor = false,
+        min_size = 2, -- minimum size of the scope
+        treesitter = { blocks = { enabled = false } },
+        desc = "full scope",
+      },
+    },
+    ---@type table<string, snacks.scope.Jump|{desc?:string}>
+    jump = {
+      ["[i"] = {
+        min_size = 1, -- allow single line scopes
+        bottom = false,
+        cursor = false,
+        edge = true,
+        treesitter = { blocks = { enabled = false } },
+        desc = "jump to top edge of scope",
+      },
+      ["]i"] = {
+        min_size = 1, -- allow single line scopes
+        bottom = true,
+        cursor = false,
+        edge = true,
+        treesitter = { blocks = { enabled = false } },
+        desc = "jump to bottom edge of scope",
+      },
+    },
 		-- 	{
 		-- 		"<leader>N",
 		-- 		desc = "Neovim News",

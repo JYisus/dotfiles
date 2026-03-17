@@ -4,7 +4,7 @@ require("config")
 -- vim.g.mapleader = " "
 -- vim.g.maplocalleader = " "
 -- <leader>pv to show directory tree
-vim.keymap.set("n", "<leader>pv", vim.cmd.Ex)
+-- vim.keymap.set("n", "<leader>pv", vim.cmd.Ex)
 -- hide search highlight
 vim.keymap.set("n", "<leader>h", ":nohlsearch<CR>")
 

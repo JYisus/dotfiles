@@ -1,5 +1,6 @@
 return {
 	'lewis6991/gitsigns.nvim',
+	event = { "BufReadPre", "BufNewFile" },
 	opts = {
 		signs                        = {
 			add          = { text = '┃' },
@@ -20,7 +21,7 @@ return {
 		signs_staged_enable          = true,
 		signcolumn                   = true, -- Toggle with `:Gitsigns toggle_signs`
 		numhl                        = false, -- Toggle with `:Gitsigns toggle_numhl`
-		linehl                       = false, -- Toggle with `:Gitsigns toggle_linehl`
+		linehl                       = true, -- Toggle with `:Gitsigns toggle_linehl`
 		word_diff                    = false, -- Toggle with `:Gitsigns toggle_word_diff`
 		watch_gitdir                 = {
 			follow_files = true
@@ -49,5 +50,27 @@ return {
 			row = 0,
 			col = 1
 		},
-	}
+	},
+	keys = function ()
+  	local gs = require("gitsigns")
+		return {
+			{ "]c", function() if vim.wo.diff then return "]c" end vim.schedule(gs.next_hunk) return "<Ignore>" end, mode = { "n" }, expr = true, desc = "Next hunk" },
+			{ "[c", function() if vim.wo.diff then return "[c" end vim.schedule(gs.prev_hunk) return "<Ignore>" end, mode = { "n" }, expr = true, desc = "Prev hunk" },
+
+			-- Actions
+			{ "<leader>hs", gs.stage_hunk, desc = "Stage hunk" },
+			{ "<leader>hr", gs.reset_hunk, desc = "Reset hunk" },
+			{ "<leader>hS", gs.stage_buffer, desc = "Stage buffer" },
+			{ "<leader>hu", gs.undo_stage_hunk, desc = "Undo stage hunk" },
+			{ "<leader>hR", gs.reset_buffer, desc = "Reset buffer" },
+			{ "<leader>hp", gs.preview_hunk, desc = "Preview hunk" },
+			{ "<leader>hb", function() gs.blame_line({ full = true }) end, desc = "Blame line" },
+			{ "<leader>hd", gs.diffthis, desc = "Diff this" },
+			{ "<leader>hD", function() gs.diffthis("~") end, desc = "Diff against last commit" },
+
+			-- Toggles
+			{ "<leader>tb", gs.toggle_current_line_blame, desc = "Toggle line blame" },
+			{ "<leader>td", gs.toggle_deleted, desc = "Toggle deleted lines" },
+		}
+	end
 }
